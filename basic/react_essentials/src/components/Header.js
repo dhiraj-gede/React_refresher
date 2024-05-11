@@ -1,4 +1,3 @@
-import React from 'react'
 import coreImg from '../assets/react-core-concepts.png'
 
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
