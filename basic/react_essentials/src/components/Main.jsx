@@ -104,20 +104,36 @@ export default function Main() {
       <section id="examples">
         <h2>Examples</h2>
         <menu>
-          <TabButton onSelect={() => handleSelect("Components")}>
+          <TabButton
+            isSelected={tabContent === "components"}
+            onSelect={() => handleSelect("Components")}
+          >
             Components
           </TabButton>
-          <TabButton onSelect={() => handleSelect("JSX")}>JSX</TabButton>
-          <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
-          <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
+          <TabButton
+            isSelected={tabContent === "jsx"}
+            onSelect={() => handleSelect("JSX")}
+          >
+            JSX
+          </TabButton>
+          <TabButton
+            isSelected={tabContent === "props"}
+            onSelect={() => handleSelect("Props")}
+          >
+            Props
+          </TabButton>
+          <TabButton
+            isSelected={tabContent === "state"}
+            onSelect={() => handleSelect("State")}
+          >
+            State
+          </TabButton>
         </menu>
         {tabContent && (
-          <div>
-            <div id="tab-content">
-              <h3>{EXAMPLES[tabContent].title}</h3>
-              <p>{EXAMPLES[tabContent].description}</p>
-              <pre>{EXAMPLES[tabContent].code}</pre>
-            </div>
+          <div id="tab-content">
+            <h3>{EXAMPLES[tabContent].title}</h3>
+            <p>{EXAMPLES[tabContent].description}</p>
+            <pre>{EXAMPLES[tabContent].code}</pre>
           </div>
         )}
       </section>
